@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./hamburger.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- SWIPEJS CSS -->
+    <link rel="stylesheet" href="../SwiperJS/css-file.css" />
+    <!-- FONT AWESOME -->
+    <script src="../fontAwesome/all.min.js" defer></script>
+    <title>Karee - Home</title>
+  </head>
+  <body>
+    <!-- -------------
+        HEADER
+    --------------- -->
+    <header>
+      <div class="container">
+        <div class="d_flex">
+          <!-- logo -->
+          <div class="logo">
+            <h2>
+              <a href="#">BeDoo<span>.</span></a>
+            </h2>
+          </div>
+          <!-- navigation menu -->
+          <nav>
+            <ul class="nav_list">
+              <li class="nav_item"><a class="nav_link" href="">Home</a></li>
+              <li class="nav_item"><a class="nav_link" href="">Shop</a></li>
+              <li class="nav_item"><a class="nav_link" href="">About</a></li>
+              <li class="nav_item">
+                <a class="nav_link" href="">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- search icon-->
+          <div class="nav_flex">
+            <button class="search_icon nav_icon">
+              <img src="../Images/search.svg" alt="search" width="24px" />
+            </button>
+            <!-- shopping cart icon-->
+            <button class="cart_icon nav_icon">
+              <img src="../Images/basket.svg" alt="cart" width="28px" />
+              <div class="count_bg">
+                <p class="cart_count"><strong>0</strong></p>
+              </div>
+            </button>
+            <!-- hamburger -->
+            <button
+              id="open_menu"
+              class="hamburger hamburger--squeeze nav_icon"
+              name="hamburger"
+              aria-label="hamburger"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- -------------
+          SEARCH
+    --------------- -->
+    <div class="search_modal">
+      <div class="sm_content container">
+        <form class="search_form">
+          <div class="form_group">
+            <label>
+              <input
+                type="search"
+                name="search"
+                id="search_bar"
+                class="search_bar"
+                placeholder="Search item, products..."
+              />
+            </label>
+            <button class="search_btn" type="button">
+              <img
+                src="../Images/product_search.svg"
+                alt="search icon"
+                width="25px"
+              />
+            </button>
+          </div>
+        </form>
+        <button class="cancel_btn" type="button">Close</button>
+      </div>
+    </div>
+    <!-- -------------
+        CART SIDEBAR
+    --------------- -->
+    <aside>
+      <div class="sidebar">
+        <!-- grid child 1 (header) -->
+        <div class="sb_header">
+          <div class="sb_header_content container">
+            <p>Cart</p>
+            <!-- close button -->
+            <button
+              id="close_cart"
+              class="hamburger hamburger--squeeze nav_icon is-active"
+              name="hamburger"
+              aria-label="hamburger"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- grid child 2 (cart items) -->
+        <div class="cart_items container">
+          <div class="cart_items_content">
+            <!-- empty cart  -->
+            <div class="empty-cart">
+              <img
+                src="../Images/empty-cart.svg"
+                alt="empty cart"
+                width="80px"
+                height="80px"
+              />
+              <p>YOUR CART IS EMPTY</p>
+            </div>
+          </div>
+        </div>
+        <!-- grid child 3 (footer)-->
+        <div class="sb_footer">
+          <div class="container">
+            <!-- total -->
+            <div class="total">
+              <div class="total_content container">
+                <p>Total Amount</p>
+                <p class="cart_amt">$0</p>
+              </div>
+            </div>
+            <div class="btn_container">
+              <!-- checkout -->
+              <button class="sb_btn checkout">Checkout</button>
+              <!-- continue shopping -->
+              <button class="sb_btn ctn_shopping_btn">Continue shopping</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- -------------
+        HERO SECTION
+    --------------- -->
+    <div class="hero_section">
+      <!-- 1st slide -->
+      <div class="slides_container">
+        <div class="my_slides fade">
+          <img src="../Images/hero1.jpg" alt="hero banner" />
+          <div class="slides_content container">
+            <p>summer collections</p>
+            <p>flat <span>45% off</span></p>
+            <p>New modern collection 2021</p>
+            <div class="cta">
+              <a href="#" class="cta_btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd slide -->
+        <div class="my_slides fade">
+          <img src="../Images/hero2.jpg" alt="hero banner" />
+          <div class="slides_content container">
+            <p>Top Trending 2021</p>
+            <p>mega <span>deals</span></p>
+            <p>best price mega sales</p>
+            <div class="cta">
+              <a href="#" class="cta_btn">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------
+      CATEGORY SECTION
+    --------------- -->
+    <section class="section category_section">
+      <div class="title">
+        <h1>Shop By Category</h1>
+      </div>
+      <div class="category_content container">
+        <ul class="categories cards">
+          <!-- card 1 -->
+          <li>
+            <article class="card" tabindex="0">
+              <h2><a href="#">Men's Wear</a></h2>
+              <div class="img">
+                <img
+                  src="../Images/men.png"
+                  alt="men's cloth"
+                  width="1000px"
+                  height="667px"
+                />
+              </div>
+            </article>
+          </li>
+          <!-- card 2 -->
+          <li>
+            <article class="card">
+              <h2><a href="#">Women's Wear</a></h2>
+              <div class="img">
+                <img
+                  src="../Images/women.png"
+                  alt="women's cloth"
+                  width="1000px"
+                  height="667px"
+                />
+              </div>
+            </article>
+          </li>
+          <!-- card 3 -->
+          <li>
+            <article class="card">
+              <h2><a href="#">Gadgets</a></h2>
+              <div class="img">
+                <img
+                  class="tv"
+                  src="../Images/gadget.png"
+                  alt="gadgets"
+                  width="1000px"
+                  height="667px"
+                />
+              </div>
+            </article>
+          </li>
+          <!-- card 4 -->
+          <li>
+            <article class="card">
+              <h2><a href="#">Accessories</a></h2>
+              <div class="img">
+                <img
+                  class="jewellery"
+                  src="../Images/accessory.png"
+                  alt="jewellery"
+                  width="1000px"
+                  height="667px"
+                />
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- -------------
+    PRODUCT SECTION
+    --------------- -->
+    <section class="section product_section">
+      <div class="title">
+        <h1>Featured Product</h1>
+      </div>
+      <div class="container">
+        <!-- preloader -->
+        <div class="preloader">
+          <img
+            src="../Images/Ellipsis.svg"
+            alt="preloader"
+            width="50px"
+            height="50px"
+          />
+        </div>
+        <div class="products"></div>
+        <!-- if network error, reload -->
+        <div class="reload">
+          <img
+            src="../Images/error.svg"
+            alt="error"
+            width="50px"
+            height="50px"
+          />
+          <p>Data failed loading. Please reload.</p>
+          <button class="reload_btn">Reload</button>
+        </div>
+        <!-- <p>Seems like your network is bad</p>
+          <button>retry</button> -->
+      </div>
+    </section>
+    <!-- -------------
+        BANNER
+    --------------- -->
+    <div class="section">
+      <div class="container banner">
+        <div class="banner_content">
+          <div class="banner_wrap">
+            <img
+              src="../Images/banner1.jpg"
+              alt="banner"
+              width="1200px"
+              height="350px"
+            />
+          </div>
+          <a href="#" style="display: none">shop now</a>
+        </div>
+      </div>
+    </div>
+    <!-- -------------
+        TESTIMONIAL
+    --------------- -->
+    <section class="section testimonial_section">
+      <div class="title">
+        <h1>Testimonials</h1>
+      </div>
+      <p>See what customers are saying</p>
+
+      <!-- Slider main container -->
+      <div class="swiper container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-card">
+              <div class="swiper-slide-content">
+                <div class="slide_img">
+                  <img src="../Images/customer-3.jpg" alt="person" />
+                </div>
+                <div class="slider-content-info">
+                  <p class="tc-name">trisha red</p>
+                  <div class="text">
+                    <i class="fas fa-quote-left fa-xs"></i>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Libero minima est culpa blanditiis aliquam ?
+                    </p>
+                    <i class="fas fa-quote-right fa-xs"></i>
+                  </div>
+                  <div class="review-stars">
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-card">
+              <div class="swiper-slide-content">
+                <div class="slide_img">
+                  <img src="../Images/customer-2.jpg" alt="person" />
+                </div>
+                <div class="slider-content-info">
+                  <p class="tc-name">hart denton</p>
+                  <div class="text">
+                    <i class="fas fa-quote-left fa-xs"></i>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Libero minima est culpa blanditiis aliquam ?
+                    </p>
+                    <i class="fas fa-quote-right fa-xs"></i>
+                  </div>
+                  <div class="review-stars">
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-card">
+              <div class="swiper-slide-content">
+                <div class="slide_img">
+                  <img src="../Images/customer-1.jpg" alt="person" />
+                </div>
+                <div class="slider-content-info">
+                  <p class="tc-name">John Doe</p>
+                  <div class="text">
+                    <i class="fas fa-quote-left fa-xs"></i>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Libero minima est culpa blanditiis aliquam ?
+                    </p>
+                    <i class="fas fa-quote-right fa-xs"></i>
+                  </div>
+                  <div class="review-stars">
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                    <i class="fas fa-star fa-xs"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- -------------
+        NEWSLETTER
+    --------------- -->
+    <div class="section newsletter_section">
+      <div class="newsletter container">
+        <div class="nl_content">
+          <h3>signUp to newsletter</h3>
+          <p>and get <span>$20 coupon for first shopping</span></p>
+        </div>
+        <form
+          action="https://formspree.io/f/xayabjwa"
+          method="POST"
+          id="nl_form"
+        >
+          <input
+            type="email"
+            name="newsletter_email"
+            placeholder="your@email.com"
+            required
+          />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New newsletter subscriber in!!!!"
+          />
+          <button aria-label="subscribe" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <!-- -------------
+        VALUES
+    --------------- -->
+    <div class="section value_section">
+      <div class="value_content container">
+        <ul class="values">
+          <!-- value 1 -->
+          <li>
+            <div class="value">
+              <img
+                src="../Images/worldwide.svg"
+                alt="globe"
+                width="40px"
+                height="40px"
+              />
+              <div class="desc">
+                <h3>Free Delivery</h3>
+                <p>For all order over $99</p>
+              </div>
+            </div>
+          </li>
+          <!-- value 2 -->
+          <li>
+            <div class="value">
+              <img
+                src="../Images/pay.svg"
+                alt="payment"
+                width="40px"
+                height="40px"
+              />
+              <div class="desc">
+                <h3>Secure Payment</h3>
+                <p>100% secure payment</p>
+              </div>
+            </div>
+          </li>
+          <!-- value 3 -->
+          <li>
+            <div class="value">
+              <img
+                src="../Images/load.svg"
+                alt="currency"
+                width="40px"
+                height="40px"
+              />
+              <div class="desc">
+                <h3>30 Days Return</h3>
+                <p>If goods have problem</p>
+              </div>
+            </div>
+          </li>
+          <!-- value 4 -->
+          <li>
+            <div class="value">
+              <img
+                src="../Images/24hr.svg"
+                alt="24hrs"
+                width="40px"
+                height="40px"
+              />
+              <div class="desc">
+                <h3>24/7 Support</h3>
+                <p>Dedicated Support</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- -------------
+       FOOTERS
+    --------------- -->
+    <footer class="footer_section">
+      <div class="footer container">
+        <div class="footer_content">
+          <div class="col col-1">
+            <!-- logo -->
+            <div class="logo">
+              <h2>
+                <a href="#">BeDoo<span>.</span></a>
+              </h2>
+            </div>
+            <ul>
+              <li><a href="">Privacy policy</a></li>
+              <li><a href="">Terms of service</a></li>
+            </ul>
+          </div>
+          <div class="flex_col">
+            <div class="col col-2">
+              <p>Links</p>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </div>
+            <div class="col col-3">
+              <p>Explore</p>
+              <ul class="quick-links">
+                <li><a href="#">By categories</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Gadgets</a></li>
+                <li><a href="#">Accessories</a></li>
+              </ul>
+            </div>
+            <div class="col col-4">
+              <p>Contact</p>
+              <div class="contact_info">
+                <p class="tel">+234-81-12-123</p>
+                <p class="mail">bedoo@shop.com</p>
+                <p class="address">211B Lancaster str, Manchester, Uk</p>
+              </div>
+              <div class="socials">
+                <!-- facebook -->
+                <a href="#" class="social_icon facebook" title="facebook">
+                  <img
+                    src="../Images/fb.svg"
+                    alt="facebook"
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+                <!-- twitter -->
+                <a href="#" class="social_icon twitter" title="twitter">
+                  <img
+                    src="../Images/twitter.svg"
+                    alt="twitter"
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+                <!-- insta -->
+                <a href="#" class="social_icon fb" title="instagram">
+                  <img
+                    src="../Images/insta.svg"
+                    alt="instagram"
+                    width="25px"
+                    height="25px"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="footer_bottom_content container">
+          <div class="payments">
+            <!-- <p>Secure Payment</p> -->
+            <!-- mastercard -->
+            <img
+              src="../Images/mastercard.png"
+              alt="mastercard"
+              width="35px"
+              height="35px"
+            />
+            <!-- visa -->
+            <img
+              src="../Images/visa.png"
+              alt="visa"
+              width="35px"
+              height="35px"
+            />
+            <!-- paypal -->
+            <img
+              src="../Images/paypal.png"
+              alt="paypal"
+              width="35px"
+              height="35px"
+            />
+          </div>
+          <p class="copyright">
+            Copyright © 2021 Bedoo <br />
+            inc. All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- -------------
+        OVERLAYS
+    --------------- -->
+    <div class="overlay one"></div>
+    <div class="overlay two"></div>
+
+    <!-- SWIPERJS  JS -->
+    <script src="../SwiperJS/js-file.js"></script>
+    <!-- script -->
+    <script src="app.js"></script>
+  </body>
+</html>
